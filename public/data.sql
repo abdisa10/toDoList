@@ -1,0 +1,12 @@
+CREATE TABLE tasks (
+
+
+ids INTEGER AUTO_INCREMENT,
+task   VARCHAR NOT NULL,
+priority  INTEGER NOT NULL,
+completed  BOOLEAN NOT NULL,
+PRIMARY KEY(ids)
+);
+
+
+

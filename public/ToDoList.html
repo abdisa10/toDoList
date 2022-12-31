@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>THE to do app</title>
+    <script type="text/javascript" src="addTask.js"></script>
+    <script type="text/javascript" src="deleteTask.js"></script>
+    <script type="text/javascript" src="finishTask.js"></script>
+    <script type="text/javascript" src="unFinishTask.js"></script>
+    <script type="text/javascript" src="refresh.js"></script>
+    <script type="text/javascript" src="sorting.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <h1>The To Do App</h1>
+            </div>
+            
+        </header>
+
+        <div class="add-task-container">
+            <div class="add_task">
+                <form class="form-container" onsubmit="return handleFormSubmit(event)">
+
+                    <div class="task-input-container">
+                        <p>To Do</p>
+                        <input class="task-input" type="task" name="task" id="task_form" placeholder="enter a task"
+                            required>
+                    </div>
+
+                    <div class="task-input-container">
+                        <p>Priority Level</p>
+                        <select name="priority" id="priority">
+                            <option selected hidden>choose a priority level</option>
+                            <option value="1">1 - Low</option>
+                            <option value="2">2 </option>
+                            <option value="3">3 - Medium</option>
+                            <option value="4">4</option>
+                            <option value="5">5 - High</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <button class="add-task-btn" id="submit_task">+ Add Task</button>
+                    </div>
+
+
+                </form>
+            </div>
+            <!-- </form>-->
+        </div>
+
+        <content>
+            <section class="current">
+                <div>
+                    <h1>Tasks</h1>
+                    <div>
+                        <button class="sort-alpha-btn" id="sort_alpha_btn" onclick="sortAlpha()">Sort by Alphabet</button>
+                    </div>
+                    <div>
+                        <button class="sort-prior-btn" id="sort_prior_btn" onclick="sortPriority()">Sort by Priority</button>
+                    </div>
+                </div>
+                
+
+                <div class="tasks">
+                </div>
+
+            </section>
+
+
+            <section class="completed">
+                <h1>Completed</h1>
+                <div class="finishedTasks">
+                </div>
+            </section>
+
+        </content>
+    </main>
+
+
+</body>
+
+</html>
